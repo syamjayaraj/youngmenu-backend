@@ -4,7 +4,7 @@
   "description": "YoungMenu Restaurant Management App",
   "main": "server.ts",
   "scripts": {
-    "start": "node server.ts",
+    "start": "node server.ts --exec ts-node",
     "dev": "nodemon server.ts --exec ts-node"
   },
   "dependencies": {
