@@ -8,7 +8,7 @@ import dotenv from "dotenv";
 
 import authRouter from "./routes/auth";
 import userRouter from "./routes/users";
-import restaurantRouter from "./routes/restaurants";
+import storeRouter from "./routes/stores";
 import orderRouter from "./routes/orders";
 
 const app = express();
@@ -24,14 +24,12 @@ app.use(formidableMiddleware());
 const PORT = process.env.PORT || 3010;
 
 // MongoDB connection
-
 let options = {
   keepAlive: true,
   connectTimeoutMS: 30000,
   useNewUrlParser: true,
   useUnifiedTopology: true,
 };
-
 mongoose
   .connect(process.env.MONGO_URI as string, options)
   .then(() => console.log("MongoDB connected"))
@@ -40,7 +38,7 @@ mongoose
 // Routes
 app.use("/auth", authRouter);
 app.use("/users", userRouter);
-app.use("/restaurants", restaurantRouter);
+app.use("/stores", storeRouter);
 app.use("/orders", orderRouter);
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));

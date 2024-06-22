@@ -5,8 +5,7 @@ import generateToken from "../config/auth";
 import { ILogin, IRegister } from "../types/Auth";
 
 const registerUser = async (req: Request, res: Response) => {
-  const { name, email, password, role }: IRegister = req.fields as any;
-  console.log(req.fields, "field");
+  const { name, email, password }: IRegister = req.fields as any;
   const userExists = await User.findOne({ email });
 
   if (userExists) {
@@ -20,7 +19,6 @@ const registerUser = async (req: Request, res: Response) => {
     name,
     email,
     password: hashedPassword,
-    role,
   });
 
   if (user) {
