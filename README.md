@@ -21,7 +21,7 @@ Youngmenu Backend is an Express-based backend for the complete restaurant manage
 1. Clone the repository
 
    ```bash
-   git clone https://github.com/yourusername/youngmenu-backend.git
+   git clone https://github.com/syamjayaraj/youngmenu-backend.git
    cd youngmenu-backend
    ```
 
@@ -34,11 +34,21 @@ Youngmenu Backend is an Express-based backend for the complete restaurant manage
    ```
 
 3. Set up environment variables
-   Create a `.env` file in the root directory and add the following:
-   ```env
-   MONGODB_URI=your_mongodb_connection_string
-   JWT_SECRET=your_secret_key
+   Copy the .env.example file to .env.local:
+
    ```
+   cp .env.example .env.local
+   ```
+
+   Create a `.env` file in the root directory and add the following:
+
+   ```env
+   MONGO_URI=your_mongodb_connection_string
+   JWT_SECRET=your_secret_key
+   PORT=your_port
+   ```
+
+   Note: You need to create a MongoDB account and set up a cluster. Follow the instructions [here](https://codeariv.com/connect-mongodb-atlas-with-express-backend/) here to get your MONGO_URI.
 
 ### Running the Project
 
@@ -50,7 +60,7 @@ Youngmenu Backend is an Express-based backend for the complete restaurant manage
    yarn start
    ```
 
-2. The server will be running on `http://localhost:5000`
+2. The server will be running on `http://localhost:3020` as default
 
 ## Contributing
 
