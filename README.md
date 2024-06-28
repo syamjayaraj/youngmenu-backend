@@ -40,7 +40,7 @@ Youngmenu Backend is an Express-based backend for the complete restaurant manage
    cp .env.example .env
    ```
 
-   Create a `.env` file in the root directory and add the following:
+   Please make sure to include your MONGO_URI in the file :
 
    ```env
    MONGO_URI=your_mongodb_connection_string
