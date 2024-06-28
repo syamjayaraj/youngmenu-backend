@@ -34,10 +34,10 @@ Youngmenu Backend is an Express-based backend for the complete restaurant manage
    ```
 
 3. Set up environment variables
-   Copy the .env.example file to .env.local:
+   Copy the .env.example file to .env:
 
    ```
-   cp .env.example .env.local
+   cp .env.example .env
    ```
 
    Create a `.env` file in the root directory and add the following:
